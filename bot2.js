@@ -1,3 +1,4 @@
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const ytdl = require('ytdl-core');
@@ -7,10 +8,11 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const prefix = 'F';
+const prefix = '4';
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`3play`,"https://www.twitch.tv/Anime & Games")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -32,9 +34,6 @@ client.on('ready', () => {
   console.log('╚[════════════]╝')
   console.log('')
   console.log('')
-  console.log('Devloped by Michou#0001')
-  console.log('BOT MUSIC Vs Arabic')	
-	
 });
 
 
@@ -267,6 +266,7 @@ client.on('message', function(message) {
 	}
 });
 
+
 client.on("message", (message) => {
             if (message.channel.type === "dm") {
         if (message.author.id === client.user.id) return;
@@ -281,6 +281,8 @@ client.on("message", (message) => {
                 client.users.get("471788143637430273").send(yumz)
             }
 });
+
+
 client.on('message', message => {
     let argresult = message.content.split(` `).slice(1).join(' ');
     if (message.content.startsWith(prefix + 'setStreaming')) {
